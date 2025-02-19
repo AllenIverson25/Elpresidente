@@ -1,86 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="style.css">
-    </head>
-
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Navbar</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-              <div class="hero-section">
-                <video class="hero-video" autoplay loop muted playsinline>
-                  <source src="imgs/speech.mp4" type="video/mp4">
-                </video>
-                <div class="hero-overlay">
-                  <div class="hero-content">
-                    <h1>Harry S. Truman</h1>
-                    <p>33rd President of the United States</p>
-                    <button class="btn btn-light btn-lg" onclick="showRandomQuote()">Discover Truman's Words</button>
-                  </div>
-                </div>
-              </div>
-        </header>
-        <main>
-<div class="row">
-    <div class="col-6">
-        
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harry S. Truman - Presidential Biography</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Harry S. Truman</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="timeline.html">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="legacy.html">Legacy</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
+  </nav>
 
+  <div class="hero-section">
+    <video class="hero-video" autoplay loop muted playsinline>
+      <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Harry S. Truman</h1>
+        <p>33rd President of the United States</p>
+        <div id="heroQuoteDisplay" class="hero-quote mb-4"></div>
+        <button class="btn btn-light btn-lg" onclick="showRandomQuote('heroQuoteDisplay')">Discover Truman's Words</button>
+      </div>
+    </div>
+  </div>
 
-        </main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+  <div class="container main-content">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center mb-5">
+        <h2>33rd President of the United States (1945-1953)</h2>
+        <p class="lead">A decisive leader who shaped the post-World War II era and America's role in the world.</p>
+      </div>
+      <div class="col-md-6">
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
-</html>
+        <section class="early-life mb-4">
+          <h4>Early Life & Education</h4>
+          <p>Born on May 8, 1884, in Lamar, Missouri, Harry S. Truman came from modest beginnings. The eldest of three children, he was born to John Anderson Truman and Martha Ellen Young Truman. Despite financial difficulties preventing him from completing college, Truman's determination and work ethic would later serve him well in his political career.</p>
+        </section>
