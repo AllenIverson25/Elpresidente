@@ -26,6 +26,7 @@ h1, h2, h3, h4, .navbar-brand {
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(10px);
+  height: 12vh;
 }
 
 .navbar {
@@ -36,8 +37,8 @@ h1, h2, h3, h4, .navbar-brand {
   z-index: 1000;
   padding: 1rem 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+
+
 }
 
 
@@ -704,4 +705,7 @@ h1, h2, h3, h4, .navbar-brand {
   .timeline-container {
     padding-top: 60px;
   }
+}
+.holy {
+  padding: 50px;
 }
