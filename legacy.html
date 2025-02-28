@@ -6,16 +6,16 @@
   <title>Legacy - Harry S. Truman</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Harry S. Truman</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
@@ -33,11 +33,14 @@
   <div class="container mt-4">
     <div class="row justify-content-center">
       <div class="col-md-8 text-center">
-        <h2 class="mt-4 holy">Test Your Knowledge</h2>
+        <h2 class="mt-5 pt-5 holy">Test Your Knowledge</h2>
         <div id="quiz-container">
           <p id="question" class="lead"></p>
           <div id="options" class="d-grid gap-3"></div>
           <p id="result" class="mt-4 mb-0"></p>
+          <div class="d-flex justify-content-center">
+            <button id="tryAgain" class="btn btn-primary mt-3" style="display: none;">Try Again</button>
+          </div>
         </div>
       </div>
     </div>

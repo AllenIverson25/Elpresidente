@@ -142,6 +142,7 @@ const trumanQuotes = [
     const questionEl = document.getElementById('question');
     const optionsEl = document.getElementById('options');
     const resultEl = document.getElementById('result');
+    const tryAgainButton = document.getElementById('tryAgain');
     
     // Clear previous result
     if (resultEl) {
@@ -150,13 +151,19 @@ const trumanQuotes = [
     }
     
     if (currentQuiz >= quizQuestions.length) {
-      quizContainer.innerHTML = `
-        <h3 class="quiz-complete">Quiz Complete!</h3>
-        <button class="btn btn-primary mt-3" onclick="resetQuiz()">Try Again</button>
-      `;
+      // Show final score
+      resultEl.textContent = `Quiz Complete! You finished the quiz!`;
+      tryAgainButton.style.display = 'block';
+      optionsEl.innerHTML = ''; // Clear options
+      questionEl.textContent = ''; // Clear question
       return;
     }
   
+    // Hide try again button during quiz
+    if (tryAgainButton) {
+      tryAgainButton.style.display = 'none';
+    }
+
     const currentQuestion = quizQuestions[currentQuiz];
     questionEl.textContent = currentQuestion.question;
     
@@ -201,6 +208,15 @@ const trumanQuotes = [
   function resetQuiz() {
     currentQuiz = 0;
     loadQuiz();
+  }
+  
+  // Update the try again button event listener
+  const tryAgainButton = document.getElementById('tryAgain');
+  if (tryAgainButton) {
+    tryAgainButton.addEventListener('click', () => {
+        currentQuiz = 0;
+        loadQuiz();
+    });
   }
   
   // Initialize elements when the page loads
