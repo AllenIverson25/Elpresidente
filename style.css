@@ -1,714 +1,810 @@
+/* Defines a class 'one' with specific width and height */
 .one {
-  width: 370px;
-  height: 500px;
+  width: 370px; /* Sets width to 370 pixels */
+  height: 500px; /* Sets height to 500 pixels */
 }
 
+/* Imports Google Fonts: Playfair Display and Source Sans Pro */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
+/* Styles for the body element */
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  line-height: 1.8;
-  background-color: #f5f7fa;
-  color: #2d3748;
+  font-family: 'Source Sans Pro', sans-serif; /* Sets default font family */
+  line-height: 1.8; /* Sets line height to 1.8 times font size */
+  background-color: #f5f7fa; /* Sets light gray background */
+  color: #2d3748; /* Sets dark gray text color */
 }
 
+/* Styles for headings and navbar brand */
 h1, h2, h3, h4, .navbar-brand {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-family: 'Playfair Display', serif; /* Uses serif font */
+  font-weight: 700; /* Sets bold font weight */
 }
 
+/* Container styling */
 .container {
-  max-width: 1200px;
+  max-width: 1200px; /* Sets maximum width of container */
 }
 
-/* Remove all existing navbar-related styles and replace with these optimized styles */
-
+/* Navbar styling with transparency and blur effect */
 .navbar {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    padding: 1rem 0;
-    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Adds blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Vendor prefix for Webkit browsers */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    padding: 1rem 0; /* Sets vertical padding */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
 }
 
+/* Navigation items container */
 .navbar-nav {
-    gap: 2rem;
+    gap: 2rem; /* Sets spacing between nav items */
 }
 
+/* Individual navigation link styling */
 .nav-link {
-    position: relative;
-    color: #333 !important;
-    font-weight: 500;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 0.5rem 1rem !important;
-    transition: color 0.3s ease !important;
+    position: relative; /* Enables positioning of pseudo-elements */
+    color: #333 !important; /* Forces dark gray color */
+    font-weight: 500; /* Sets medium-bold weight */
+    font-size: 1rem; /* Sets font size */
+    text-transform: uppercase; /* Makes text uppercase */
+    letter-spacing: 1px; /* Adds letter spacing */
+    padding: 0.5rem 1rem !important; /* Sets padding */
+    transition: color 0.3s ease !important; /* Smooth color transition */
 }
 
+/* Underline effect for nav links */
 .nav-link::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #0d6efd, #00ff99);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Absolute positioning */
+    bottom: 0; /* Aligns to bottom */
+    left: 50%; /* Centers horizontally */
+    width: 0; /* Initial width */
+    height: 2px; /* Height of underline */
+    background: linear-gradient(90deg, #0d6efd, #00ff99); /* Gradient underline */
+    transition: all 0.3s ease; /* Smooth transition */
+    transform: translateX(-50%); /* Centers the element */
 }
 
+/* Hover state for nav links */
 .nav-link:hover {
-    color: #0d6efd !important;
+    color: #0d6efd !important; /* Changes to blue on hover */
 }
 
+/* Hover state for underline effect */
 .nav-link:hover::before {
-    width: 100%;
+    width: 100%; /* Expands to full width */
 }
 
+/* Active state for nav links */
 .nav-link.active {
-    color: #0d6efd !important;
+    color: #0d6efd !important; /* Blue color for active link */
 }
 
+/* Active state underline */
 .nav-link.active::before {
-    width: 100%;
+    width: 100%; /* Full width underline */
 }
 
+/* Navbar toggler (hamburger menu) styling */
 .navbar-toggler {
-    border: none;
-    padding: 0.5rem;
+    border: none; /* Removes border */
+    padding: 0.5rem; /* Sets padding */
 }
 
+/* Toggler focus state */
 .navbar-toggler:focus {
-    box-shadow: none;
+    box-shadow: none; /* Removes focus shadow */
 }
 
+/* Toggler icon styling */
 .navbar-toggler-icon {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Smooth rotation transition */
 }
 
+/* Toggler icon when menu is open */
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    transform: rotate(90deg);
+    transform: rotate(90deg); /* Rotates 90 degrees */
 }
 
+/* Media query for screens smaller than 991.98px */
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background: rgba(255, 255, 255, 0.98);
-        padding: 1rem;
-        border-radius: 0 0 15px 15px;
+        background: rgba(255, 255, 255, 0.98); /* Slightly more opaque background */
+        padding: 1rem; /* Adds padding */
+        border-radius: 0 0 15px 15px; /* Rounds bottom corners */
     }
 
     .navbar-nav {
-        gap: 0.5rem;
+        gap: 0.5rem; /* Reduces gap between items */
     }
 
     .nav-link {
-        text-align: center;
+        text-align: center; /* Centers text */
     }
 
     .nav-link::before {
-        bottom: 0;
-        left: 0;
-        transform: translateX(0);
+        bottom: 0; /* Positions underline */
+        left: 0; /* Aligns left */
+        transform: translateX(0); /* Removes centering transform */
     }
 
     .nav-link:hover::before {
-        width: 100%;
+        width: 100%; /* Full width on hover */
     }
 }
 
+/* Hero section styling */
 .hero-section {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 2rem;
+  position: relative; /* Enables positioning of children */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  overflow: hidden; /* Prevents content overflow */
+  margin-bottom: 2rem; /* Adds bottom margin */
 }
 
+/* Hero video styling */
 .hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Top aligned */
+  left: 0; /* Left aligned */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Covers container */
 }
 
+/* Hero overlay styling */
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Top aligned */
+  left: 0; /* Left aligned */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  text-align: center; /* Centers text */
+  color: white; /* White text */
 }
 
+/* Hero content container */
 .hero-content {
-  max-width: 800px;
-  padding: 2rem;
+  max-width: 800px; /* Maximum width */
+  padding: 2rem; /* Padding */
 }
 
+/* Hero heading styling */
 .hero-content h1 {
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  letter-spacing: -0.02em;
+  font-size: clamp(2.5rem, 8vw, 4.5rem); /* Responsive font size */
+  font-weight: 700; /* Bold weight */
+  margin-bottom: 1rem; /* Bottom margin */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow */
+  letter-spacing: -0.02em; /* Slight letter spacing */
 }
 
+/* Hero paragraph styling */
 .hero-content p {
-  font-size: clamp(1.2rem, 4vw, 2rem);
-  margin-bottom: 2rem;
-  font-weight: 300;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: clamp(1.2rem, 4vw, 2rem); /* Responsive font size */
+  margin-bottom: 2rem; /* Bottom margin */
+  font-weight: 300; /* Light weight */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
 }
 
+/* Hero button styling */
 .hero-content .btn {
-  font-size: 1.2rem;
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem; /* Font size */
+  padding: 1rem 2.5rem; /* Padding */
+  border-radius: 50px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
+/* Hero button hover state */
 .hero-content .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px); /* Slight lift */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
+/* Hero quote styling */
 .hero-quote {
-  font-size: 1.3rem;
-  color: white;
-  font-style: italic;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  min-height: 60px;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-  padding: 0 2rem;
+  font-size: 1.3rem; /* Font size */
+  color: white; /* White text */
+  font-style: italic; /* Italic text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Strong text shadow */
+  min-height: 60px; /* Minimum height */
+  opacity: 1; /* Full opacity */
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
+  padding: 0 2rem; /* Horizontal padding */
 }
 
+/* Section title styling */
 .section-title {
-  font-size: 2.5rem;
-  color: #2d3748;
-  margin-bottom: 2rem;
-  position: relative;
-  padding-bottom: 1rem;
+  font-size: 2.5rem; /* Font size */
+  color: #2d3748; /* Dark gray color */
+  margin-bottom: 2rem; /* Bottom margin */
+  position: relative; /* Enables pseudo-element positioning */
+  padding-bottom: 1rem; /* Bottom padding */
 }
 
+/* Section title underline effect */
 .section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(to right, #0d6efd, #60a5fa);
-  border-radius: 2px;
+  content: ''; /* Empty content */
+  position: absolute; /* Absolute positioning */
+  bottom: 0; /* Bottom aligned */
+  left: 0; /* Left aligned */
+  width: 60px; /* Width of underline */
+  height: 4px; /* Height of underline */
+  background: linear-gradient(to right, #0d6efd, #60a5fa); /* Gradient */
+  border-radius: 2px; /* Slightly rounded */
 }
 
+/* Main content styling */
 .main-content {
-  margin-top: 90px;
-  padding: 2rem 0;
+  margin-top: 90px; /* Top margin */
+  padding: 2rem 0; /* Vertical padding */
 }
 
+/* Section content styling */
 .section-content {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 2.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  border-top: 4px solid #0d6efd;
+  background: #ffffff; /* White background */
+  border-radius: 20px; /* Rounded corners */
+  padding: 2.5rem; /* Padding */
+  margin-bottom: 2rem; /* Bottom margin */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Subtle shadow */
+  border-top: 4px solid #0d6efd; /* Blue top border */
 }
 
+/* Content grid layout */
 .content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 2rem; /* Spacing between items */
+  margin: 2rem 0; /* Vertical margin */
 }
 
+/* Container styling */
 .container {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: white; /* White background */
+  padding: 2rem; /* Padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Light shadow */
 }
 
+/* Quote display styling */
 #quoteDisplay {
-  padding: 1.5rem;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  margin-top: 1rem;
-  border-left: 4px solid #0d6efd;
-  transition: all 0.3s ease;
+  padding: 1.5rem; /* Padding */
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 1rem; /* Top margin */
+  border-left: 4px solid #0d6efd; /* Blue left border */
+  transition: all 0.3s ease; /* Smooth transitions */
 }
 
+/* Timeline item styling */
 .timeline-item {
-  cursor: pointer;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 8px;
-  background-color: #f8f9fa;
-  border-left: 4px solid #0d6efd;
-  transition: all 0.3s ease;
-  position: relative;
+  cursor: pointer; /* Pointer cursor */
+  padding: 1rem; /* Padding */
+  margin: 1rem 0; /* Vertical margin */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f8f9fa; /* Light gray background */
+  border-left: 4px solid #0d6efd; /* Blue left border */
+  transition: all 0.3s ease; /* Smooth transitions */
+  position: relative; /* Relative positioning */
 }
 
+/* Timeline item hover state */
 .timeline-item:hover {
-  background-color: #e9ecef;
-  transform: translateX(5px);
+  background-color: #e9ecef; /* Darker gray on hover */
+  transform: translateX(5px); /* Slight shift right */
 }
 
+/* Timeline item heading */
 .timeline-item h4 {
-  margin: 0;
-  color: #0d6efd;
+  margin: 0; /* Removes default margin */
+  color: #0d6efd; /* Blue text */
 }
 
+/* Timeline item details */
 .timeline-item .details {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #dee2e6;
+  margin-top: 1rem; /* Top margin */
+  padding-top: 1rem; /* Top padding */
+  border-top: 1px solid #dee2e6; /* Light gray border */
 }
 
+/* Quiz container styling */
 #quiz-container {
-  background-color: #f8f9fa;
-  padding: 2rem;
-  border-radius: 8px;
-  margin-top: 2rem;
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 2rem; /* Padding */
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 2rem; /* Top margin */
 }
 
+/* Quiz options buttons */
 #options button {
-  width: 100%;
-  margin: 0.5rem 0;
-  transition: all 0.3s ease;
+  width: 100%; /* Full width */
+  margin: 0.5rem 0; /* Vertical margin */
+  transition: all 0.3s ease; /* Smooth transitions */
 }
 
+/* Quiz options button hover state */
 #options button:hover {
-  transform: translateX(5px);
+  transform: translateX(5px); /* Slight shift right */
 }
 
+/* Quiz result styling */
 #result {
-  font-weight: bold;
-  padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 8px;
+  font-weight: bold; /* Bold text */
+  padding: 1rem; /* Padding */
+  margin-top: 1rem; /* Top margin */
+  border-radius: 8px; /* Rounded corners */
 }
 
+/* Success text styling */
 .text-success {
-  background-color: #d4edda;
-  color: #155724;
+  background-color: #d4edda; /* Light green background */
+  color: #155724; /* Dark green text */
 }
 
+/* Danger text styling */
 .text-danger {
-  background-color: #f8d7da;
-  color: #721c24;
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
 }
 
+/* Section styling for different content areas */
 .early-life, .military-service, .major-decisions, .legacy {
-  padding: 1.5rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  margin-bottom: 1.5rem;
+  padding: 1.5rem; /* Padding */
+  background-color: #fff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Light shadow */
+  margin-bottom: 1.5rem; /* Bottom margin */
 }
 
+/* List group item styling */
 .list-group-item {
-  border-left: 3px solid #0d6efd;
-  margin-bottom: 0.5rem;
-  transition: all 0.3s ease;
+  border-left: 3px solid #0d6efd; /* Blue left border */
+  margin-bottom: 0.5rem; /* Bottom margin */
+  transition: all 0.3s ease; /* Smooth transitions */
 }
 
+/* List group item hover state */
 .list-group-item:hover {
-  background-color: #f8f9fa;
-  transform: translateX(5px);
+  background-color: #f8f9fa; /* Light gray background */
+  transform: translateX(5px); /* Slight shift right */
 }
 
+/* Card styling */
 .card {
-  border: none;
-  background: linear-gradient(135deg, #ffffff, #f8f9fa);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  border-radius: 20px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-  border-top: 4px solid #0d6efd;
-  margin-bottom: 1.5rem;
+  border: none; /* Removes border */
+  background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Gradient background */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Shadow */
+  border-radius: 20px; /* Rounded corners */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition */
+  overflow: hidden; /* Prevents content overflow */
+  border-top: 4px solid #0d6efd; /* Blue top border */
+  margin-bottom: 1.5rem; /* Bottom margin */
 }
 
+/* Card body styling */
 .card .card-body {
-  padding: 1.8rem;
+  padding: 1.8rem; /* Padding */
 }
 
+/* Card title styling */
 .card .card-title {
-  font-size: 1.4rem;
-  color: #0d6efd;
-  margin-bottom: 1.2rem;
-  border-bottom: 2px solid #e9ecef;
-  padding-bottom: 0.8rem;
+  font-size: 1.4rem; /* Font size */
+  color: #0d6efd; /* Blue text */
+  margin-bottom: 1.2rem; /* Bottom margin */
+  border-bottom: 2px solid #e9ecef; /* Light gray border */
+  padding-bottom: 0.8rem; /* Bottom padding */
 }
 
+/* Card list group item styling */
 .card .list-group-item {
-  padding: 1rem 1.5rem;
-  border: none;
-  background: transparent;
-  position: relative;
-  transition: all 0.3s ease;
+  padding: 1rem 1.5rem; /* Padding */
+  border: none; /* Removes border */
+  background: transparent; /* Transparent background */
+  position: relative; /* Enables pseudo-element */
+  transition: all 0.3s ease; /* Smooth transitions */
 }
 
+/* Arrow pseudo-element for list items */
 .card .list-group-item:before {
-  content: '→';
-  color: #0d6efd;
-  margin-right: 10px;
-  opacity: 0;
-  transition: all 0.3s ease;
+  content: '→'; /* Arrow character */
+  color: #0d6efd; /* Blue color */
+  margin-right: 10px; /* Right margin */
+  opacity: 0; /* Initially hidden */
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
+/* List item hover state for arrow */
 .card .list-group-item:hover:before {
-  opacity: 1;
-  transform: translateX(5px);
+  opacity: 1; /* Shows arrow */
+  transform: translateX(5px); /* Moves arrow right */
 }
 
+/* Card hover state */
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  transform: translateY(-5px); /* Lifts up */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12); /* Enhanced shadow */
 }
 
+/* Horizontal timeline events */
 .timeline-events {
-  display: flex;
-  overflow-x: auto;
-  padding: 4rem 0;
-  position: relative;
-  scroll-behavior: smooth;
-  max-width: 85%;
-  margin: 6rem auto 2rem;
+  display: flex; /* Flex layout */
+  overflow-x: auto; /* Horizontal scrolling */
+  padding: 4rem 0; /* Vertical padding */
+  position: relative; /* Enables pseudo-element */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  max-width: 85%; /* Maximum width */
+  margin: 6rem auto 2rem; /* Margins */
 }
 
+/* Vertical timeline events */
 .timeline-events-vertical {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem 0;
-  max-width: 100%;
-  margin: 2rem auto;
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Vertical stacking */
+  gap: 2rem; /* Spacing between items */
+  padding: 2rem 0; /* Vertical padding */
+  max-width: 100%; /* Full width */
+  margin: 2rem auto; /* Centered margins */
 }
 
+/* Vertical timeline item styling */
 .timeline-events-vertical .timeline-item {
-  width: 100%;
-  margin: 0;
-  border-left: 4px solid #0d6efd;
-  border-radius: 0 20px 20px 0;
+  width: 100%; /* Full width */
+  margin: 0; /* Removes margins */
+  border-left: 4px solid #0d6efd; /* Blue left border */
+  border-radius: 0 20px 20px 0; /* Rounded right corners */
 }
 
+/* Vertical timeline item image */
 .timeline-events-vertical .timeline-item img {
-  border-radius: 0 20px 0 0;
+  border-radius: 0 20px 0 0; /* Rounded top-right corner */
 }
 
+/* Timeline center line */
 .timeline-events::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background: #0d6efd;
-  top: 50%;
-  left: 0;
-  z-index: 0;
+  content: ''; /* Empty content */
+  position: absolute; /* Absolute positioning */
+  width: 100%; /* Full width */
+  height: 3px; /* Line height */
+  background: #0d6efd; /* Blue color */
+  top: 50%; /* Centered vertically */
+  left: 0; /* Left aligned */
+  z-index: 0; /* Behind items */
 }
 
+/* Timeline item styling */
 .timeline-item {
-  min-width: 350px;
-  margin: 0 1.5rem;
-  padding: 0;
-  background: linear-gradient(145deg, #ffffff, #f8f9fa);
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 1;
-  transform-origin: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
+  min-width: 350px; /* Minimum width */
+  margin: 0 1.5rem; /* Horizontal margin */
+  padding: 0; /* No padding */
+  background: linear-gradient(145deg, #ffffff, #f8f9fa); /* Gradient */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Shadow */
+  position: relative; /* Relative positioning */
+  z-index: 1; /* Above timeline */
+  transform-origin: center; /* Transform origin */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition */
+  overflow: hidden; /* Prevents overflow */
 }
 
+/* Timeline item image */
 .timeline-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-bottom: 4px solid #0d6efd;
+  width: 100%; /* Full width */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Covers container */
+  border-bottom: 4px solid #0d6efd; /* Blue bottom border */
 }
 
+/* Timeline item content */
 .timeline-item-content {
-  padding: 1.5rem;
+  padding: 1.5rem; /* Padding */
 }
 
+/* Timeline item heading */
 .timeline-item h4 {
-  color: #0d6efd;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+  color: #0d6efd; /* Blue text */
+  font-size: 1.3rem; /* Font size */
+  margin-bottom: 1rem; /* Bottom margin */
 }
 
+/* Year badge in timeline */
 .timeline-item .year-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #0d6efd;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  font-weight: bold;
+  position: absolute; /* Absolute positioning */
+  top: 1rem; /* Top offset */
+  right: 1rem; /* Right offset */
+  background: #0d6efd; /* Blue background */
+  color: white; /* White text */
+  padding: 0.5rem 1rem; /* Padding */
+  border-radius: 50px; /* Fully rounded */
+  font-weight: bold; /* Bold text */
 }
 
+/* Timeline item details */
 .timeline-item .details {
-  padding: 0;
-  background: rgba(13, 110, 253, 0.05);
-  border-radius: 10px;
-  margin-top: 0;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0; /* No padding initially */
+  background: rgba(13, 110, 253, 0.05); /* Light blue background */
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 0; /* No top margin */
+  max-height: 0; /* Collapsed initially */
+  overflow: hidden; /* Hides overflow */
+  opacity: 0; /* Hidden initially */
+  transform: translateY(-10px); /* Shifted up */
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition */
 }
 
+/* Active state for timeline details */
 .timeline-item .details.active {
-  padding: 1rem;
-  max-height: 500px;
-  margin-top: 1rem;
-  opacity: 1;
-  transform: translateY(0);
+  padding: 1rem; /* Padding when active */
+  max-height: 500px; /* Maximum height when expanded */
+  margin-top: 1rem; /* Top margin */
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Normal position */
 }
 
+/* Quiz option styling */
 .quiz-option {
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  transition: all 0.3s ease; /* Smooth transitions */
+  position: relative; /* Relative positioning */
+  overflow: hidden; /* Prevents overflow */
 }
 
+/* Quiz option hover state */
 .quiz-option:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Shadow */
 }
 
+/* Correct answer styling */
 .correct-answer {
-  background-color: #198754 !important;
-  color: white !important;
-  border-color: #198754 !important;
+  background-color: #198754 !important; /* Green background */
+  color: white !important; /* White text */
+  border-color: #198754 !important; /* Green border */
 }
 
+/* Incorrect answer styling */
 .incorrect-answer {
-  background-color: #dc3545 !important;
-  color: white !important;
-  border-color: #dc3545 !important;
+  background-color: #dc3545 !important; /* Red background */
+  color: white !important; /* White text */
+  border-color: #dc3545 !important; /* Red border */
 }
 
+/* Result message animation */
 .result-message {
-  animation: fadeInUp 0.5s ease;
+  animation: fadeInUp 0.5s ease; /* Fade in animation */
 }
 
+/* Fade in animation keyframes */
 @keyframes fadeInUp {
   from {
-    opacity: 0;
-    transform: translateY(10px);
+    opacity: 0; /* Start hidden */
+    transform: translateY(10px); /* Start shifted down */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* End visible */
+    transform: translateY(0); /* End at normal position */
   }
 }
 
+/* Quiz complete animation */
 .quiz-complete {
-  animation: scaleIn 0.5s ease;
+  animation: scaleIn 0.5s ease; /* Scale in animation */
 }
 
+/* Scale in animation keyframes */
 @keyframes scaleIn {
   from {
-    opacity: 0;
-    transform: scale(0.9);
+    opacity: 0; /* Start hidden */
+    transform: scale(0.9); /* Start smaller */
   }
   to {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 1; /* End visible */
+    transform: scale(1); /* End at normal size */
   }
 }
 
+/* Quiz container styling */
 #quiz-container {
-  background: linear-gradient(145deg, #ffffff, #f8f9fa);
-  border-radius: 25px;
-  padding: 3.5rem;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-  max-width: 800px;
-  margin: 4rem auto;
-  text-align: center;
-  border-top: 5px solid #0d6efd;
-  position: relative;
-  transform: translateY(0);
-  transition: transform 0.3s ease;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa); /* Gradient */
+  border-radius: 25px; /* Rounded corners */
+  padding: 3.5rem; /* Padding */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* Shadow */
+  max-width: 800px; /* Maximum width */
+  margin: 4rem auto; /* Centered margins */
+  text-align: center; /* Centered text */
+  border-top: 5px solid #0d6efd; /* Blue top border */
+  position: relative; /* Relative positioning */
+  transform: translateY(0); /* Normal position */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
+/* Quiz container overlay effect */
 #quiz-container:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
-  pointer-events: none;
-  border-radius: 25px;
+  content: ''; /* Empty content */
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Top aligned */
+  left: 0; /* Left aligned */
+  right: 0; /* Right aligned */
+  height: 100%; /* Full height */
+  background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%); /* Subtle gradient */
+  pointer-events: none; /* Allows clicks through */
+  border-radius: 25px; /* Matches container */
 }
 
+/* Quiz options layout */
 #options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin: 2rem auto;
-  max-width: 600px;
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 1rem; /* Spacing */
+  margin: 2rem auto; /* Centered margins */
+  max-width: 600px; /* Maximum width */
 }
 
+/* Quiz heading */
 #quiz-container h3 {
-  color: #0d6efd;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
+  color: #0d6efd; /* Blue text */
+  font-size: 2rem; /* Font size */
+  margin-bottom: 2rem; /* Bottom margin */
+  text-align: center; /* Centered text */
 }
 
+/* Quiz question styling */
 #question {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 10px;
-  text-align: center;
+  font-size: 1.3rem; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  margin-bottom: 2rem; /* Bottom margin */
+  padding: 1rem; /* Padding */
+  background: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Centered text */
 }
 
+/* Quiz options grid */
 #options {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 2rem;
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 1rem; /* Spacing */
+  margin-bottom: 2rem; /* Bottom margin */
 }
 
+/* Quiz option buttons */
 #options button {
-  padding: 1rem;
-  font-size: 1.1rem;
-  border-radius: 10px;
-  background: white;
-  border: 2px solid #0d6efd;
-  transition: all 0.3s ease;
+  padding: 1rem; /* Padding */
+  font-size: 1.1rem; /* Font size */
+  border-radius: 10px; /* Rounded corners */
+  background: white; /* White background */
+  border: 2px solid #0d6efd; /* Blue border */
+  transition: all 0.3s ease; /* Smooth transitions */
 }
 
+/* Quiz button hover state */
 #options button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
-  background: #0d6efd;
-  color: white;
+  transform: translateY(-3px); /* Slight lift */
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2); /* Shadow */
+  background: #0d6efd; /* Blue background */
+  color: white; /* White text */
 }
 
+/* Quiz result styling */
 #result {
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin-top: 2rem;
+  text-align: center; /* Centered text */
+  font-size: 1.2rem; /* Font size */
+  padding: 1.5rem; /* Padding */
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 2rem; /* Top margin */
 }
 
+/* Timeline item hover state */
 .timeline-item:hover {
-  transform: scale(1.02);
-  background: linear-gradient(145deg, #ffffff, #e9ecef);
+  transform: scale(1.02); /* Slight scale up */
+  background: linear-gradient(145deg, #ffffff, #e9ecef); /* Gradient */
 }
 
+/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
   .container {
-    padding: 1rem;
+    padding: 1rem; /* Reduced padding */
   }
 
   .hero-content {
-    padding: 1rem;
+    padding: 1rem; /* Reduced padding */
   }
 
   .card {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Bottom margin */
   }
 
   .timeline-item {
-    margin: 1rem 0;
+    margin: 1rem 0; /* Vertical margin */
   }
 }
 
+/* Quote section styling */
 .quote-section {
-  background: linear-gradient(135deg, #f8f9fa, #ffffff);
-  border-radius: 15px;
-  padding: 2rem;
-  margin: 2rem 0;
-  position: relative;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff); /* Gradient */
+  border-radius: 15px; /* Rounded corners */
+  padding: 2rem; /* Padding */
+  margin: 2rem 0; /* Vertical margin */
+  position: relative; /* Relative positioning */
 }
 
+/* Quote section decorative quote mark */
 .quote-section::before {
-  content: '"';
-  position: absolute;
-  top: -20px;
-  left: 20px;
-  font-size: 5rem;
-  color: #0d6efd;
-  opacity: 0.1;
-  font-family: 'Playfair Display', serif;
+  content: '"'; /* Quote character */
+  position: absolute; /* Absolute positioning */
+  top: -20px; /* Above container */
+  left: 20px; /* Left offset */
+  font-size: 5rem; /* Large size */
+  color: #0d6efd; /* Blue color */
+  opacity: 0.1; /* Faded */
+  font-family: 'Playfair Display', serif; /* Serif font */
 }
 
+/* Card title styling */
 .card-title {
-  color: #0d6efd;
-  border-bottom: 2px solid #e9ecef;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  color: #0d6efd; /* Blue text */
+  border-bottom: 2px solid #e9ecef; /* Light gray border */
+  padding-bottom: 0.5rem; /* Bottom padding */
+  margin-bottom: 1rem; /* Bottom margin */
 }
 
+/* Timeline container styling */
 .timeline-container {
-  padding-top: 80px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-top: 80px; /* Top padding */
+  min-height: 100vh; /* Full viewport height */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Vertical stacking */
+  justify-content: center; /* Centered content */
 }
 
+/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
   .timeline-events {
-    max-width: 95%;
-    margin: 4rem auto 1rem;
-    padding: 2rem 0;
+    max-width: 95%; /* Nearly full width */
+    margin: 4rem auto 1rem; /* Adjusted margins */
+    padding: 2rem 0; /* Reduced padding */
   }
   
   .timeline-container {
-    padding-top: 60px;
+    padding-top: 60px; /* Reduced top padding */
   }
 }
+
+/* Holy class styling */
 .holy {
-  padding: 50px;
+  padding: 50px; /* Large padding */
 }
+
+/* Margin class (empty) */
 .marg {
- 
+  /* No properties defined */
 }
 
+/* Citations container styling */
 .citations {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Padding */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Individual citation styling */
 .citation {
-    margin-bottom: 1.5rem;
-    padding-left: 2em;
-    text-indent: -2em;
-    line-height: 1.6;
+    margin-bottom: 1.5rem; /* Bottom margin */
+    padding-left: 2em; /* Left padding */
+    text-indent: -2em; /* Hanging indent */
+    line-height: 1.6; /* Line height */
 }
 
+/* Citation links */
 .citation a {
-    color: #0056b3;
-    text-decoration: none;
+    color: #0056b3; /* Blue color */
+    text-decoration: none; /* No underline */
 }
 
+/* Citation link hover state */
 .citation a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover */
 }
